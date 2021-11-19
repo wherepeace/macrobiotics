@@ -46,6 +46,11 @@ const [data, setdata] = useState(contents);
     return (
         <div className={styles.container}>
             <div className={styles.wrapperContainer}  >
+                <div className={styles.containerTitle}>
+                    <div className={styles.subTitle}>
+                    Một số câu hỏi phổ biến <br/> thường được hỏi ?
+                    </div>
+                </div>
                 {data.map((item)=>{
                     const {id} = item ;
                     return (

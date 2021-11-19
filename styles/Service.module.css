@@ -6,11 +6,11 @@
     flex-direction: column;
 }
 .title {
-    max-width: 200px;
-    font-size: 26px;
+    max-width: 300px;
+    font-size: 32px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    border-bottom: 4px solid #3e6553;
+
     color: #343f3a;
     width: max-content;
     margin-bottom: 20px;

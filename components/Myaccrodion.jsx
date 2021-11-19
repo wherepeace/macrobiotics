@@ -9,8 +9,8 @@ const Myaccrodion = ({title, desc}) => {
     return (
         <div  className={styles.containerQuestion} >
            <div className={styles.header}  onClick={()=>setShow(!show)}>
-              {show ? <ClearIcon className={styles.icon}/> :  <AddIcon  className={styles.icon}/> } 
-              <h5 className={styles.title}>{title}</h5>
+              {show ? < ClearIcon className={styles.icon}/> :  <AddIcon  className={styles.icon}/> } 
+              <h3 className={styles.title}>{title}</h3>
            </div>
             <div style={{ height:  show ? "150px" : "0px",
                           backgroundColor:  show ? "rgb(230,239,235)" : "rgb(245, 243, 236)"}} className={styles.content} >
