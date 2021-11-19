@@ -1,0 +1,105 @@
+
+.formInput{
+    width: 100%;
+    height:50px;
+    position: relative;
+}
+.formInput input {
+    width: 100%;
+    height:100%;
+    padding-top: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+}
+.label {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    border-bottom: 1px solid rgb(168, 168, 168);
+}
+.label::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    border-bottom: 3px solid #444;
+    transform: translateX(-100%);
+    transition:transform 2s ease;
+}
+.containerName {
+    position: absolute;
+    bottom: 5px;
+    left: 2px;
+    transition: all 1s ease ;
+}
+.formInput input:focus + .label .containerName,
+.formInput input:valid + .label .containerName
+{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #3e6553;
+}
+.formInput input:focus + .label::after, 
+.formInput input:valid + .label::after {
+  transform: translateX(-0%);
+}
+
+.erroMessager {
+    font-size: 16px;
+    padding: 4px;
+    color: red;
+    display: none;
+    animation: erromove 1s linear ;
+}
+@keyframes erromove {
+    to {
+        transform-origin: top left;
+        transform: scale(1)
+    }
+    from {
+        transform: scale(0)
+    }
+    }
+
+.formInput input:invalid[focused="true"] ~ span {
+    transition: all 1s ease;
+    display: block;
+}
+.formInput input:invalid[focused="true"]  {
+    border:1px solid red;
+    transition: all 1s ease;
+}
+
+/* // RESPONSIVE // */
+@media screen and (max-width:480px) {
+    .formInput {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+    .formInput input {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+
+    }
+    .erroMessager {
+        font-size: 12px;
+        color: red;
+        display: none;
+    }
+.formInput input:focus + .label .containerName,
+.formInput input:valid + .label .containerName
+{
+    transform: translateY(-130%);
+    font-size: 12px;
+    color: #3e6553;
+}
+}

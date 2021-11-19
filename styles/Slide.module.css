@@ -1,0 +1,132 @@
+.container {
+    width:  100%;
+    margin-top: 50px;
+    height: 400px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.arrowPrev{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8%;
+    margin: auto;
+    cursor: pointer;
+    z-index:2;
+}
+.arrowNext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 8%;
+    margin: auto;
+    cursor: pointer;
+    z-index: 2;
+}
+.slideContainer{
+   height: 80%;
+   width: 80%;
+   position: relative;
+   overflow: hidden;
+   border: 1px solid rgb(226, 226, 226);
+   border-radius: 10px;
+}
+.wrapper {
+    height: 100%;
+    display: flex;
+    position: absolute; 
+    transition: all 3s ease;
+}
+.slide {
+    width:  80vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgContainer {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}   
+.infoContainer{
+    padding: 60px;
+    height: 80%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+.desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(235, 235, 235);
+}
+.button {
+    padding: 4px;
+    width: 100px;
+    height: 30px;
+    color: rgb(102, 102, 102);
+    border: none;
+    border-radius: 8px;
+    background-color: #cfe6db;
+    cursor: pointer;
+}
+
+/* // RESPONSIVE // */
+@media screen and (max-width:480px) {
+    .container {
+        margin-top: 30px;
+        height: 300px 
+    }
+    .infoContainer{
+      display: none;
+    }
+    .arrowPrev{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        bottom: 0;
+        left: 4%;
+    }
+    .arrowNext{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        bottom: 0;
+        right: 4%;
+    }
+    .icon {
+        font-size: 12px;
+    }
+}
